@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE rss[
+<!ATTLIST rss version CDATA "2.0">
+<!ELEMENT rss (channel)>
+<!ELEMENT channel (title,link,description,language,image,item+)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT image (title,url,link,width,height)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT widht (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT item (title,link,description)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+]>

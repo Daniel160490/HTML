@@ -1,0 +1,30 @@
+<?xml version ="1.0"?>
+<!DOCTYPE formula1 [
+	<!ELEMENT formula1 (equipos*)>
+	<!ELEMENT equipos (nombre_equipo,id_pilotos,numero_carreras,puntos)*>
+	<!ELEMENT nombre_equipo (#PCDATA)>
+	<!ELEMENT id_piloto (#PCDATA)>
+		<!ATTLIST id_piloto ID #required>
+	<!ELEMENT numero_carreras (#PCDATA)>
+		<!ATTLIST numero_carreras #required>
+	<!ELEMENT puntos (#PCDATA)> 		
+
+
+
+
+
+
+
+<formula1>
+	<equipos>
+		<equipo> 
+			<nombre_equipo> Renault </nombre_equipo>	
+				<pilotos>		
+					<piloto> Fernando Alonso </piloto>	
+					<numero_carreras> 30 </numero_carrera>
+					<puntos> 120 </puntos>
+				</pilotos>
+		</equipo>
+	</equipos>
+</formula1>			
+		

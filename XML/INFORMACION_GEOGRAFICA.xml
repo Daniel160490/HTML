@@ -1,0 +1,36 @@
+Informacion Geográfica
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!---DTD-->
+<!DOCTYPE ELEMENT punto_geografico [
+<!ELEMENT punto_geografico (direcion, (latitud?|longitud?), notas)>
+	<!ATTLIST punto_geografico direccion (#PCDATA)>
+	<!ATTLIST punto_geografico latitud (#PCDATA)>
+	<!ATTLIST punto_geografico longitud (#PCDATA)>
+	<!ATTLIST punto_geografico notas (ANY)>
+]>
+<!---SCHEMA-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="punto_geografico">
+    	<xs:complexType>
+      		<xs:sequence>
+        		<xs:element type="xs:string" name="direccion"/>
+        			<xs:complexType>
+        				<xs:choice>
+        					<xs:element name="latitud" type="xs:float"/>
+        					<xs:element name="longitud" type="xs:float"/>
+        				</xs:choice>
+        			</xs:complexType>
+        		</xs:sequence>
+        	</xs:complexType>
+    <xs:element type="xs:string" name="notas"/>
+   	</xs:element>
+</xs:schema>
+
+<!---XML-->
+<punto_geografico>
+	<direccion> Salobreña, Granada </direccion>
+	<latitud> 36.75836 </latitud>
+	<longitud> -3.592290000000048 </longitud>
+	<notas> Este es un pueblo de la costa granadina.</notas>
+</punto_geografico>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE instituto [
+<!ELEMENT instituto (FP)>
+<!ELEMENT FP (primero_DAM)>
+<!ELEMENT primero_DAM (asiganturas)>
+<!ELEMENT asiganturas (PROG,LM)>
+<!ELEMENT PROG (alumnos_matriculados+)>
+<!ELEMENT alumnos_matriculados (nombre_apellido)>
+<!ELEMENT nombre_apellido (nota)>
+<!ELEMENT nota (#PCDATA)>
+<!ELEMENT LM (alumnos_matriculados+)>
+<!ELEMENT alumnos_matriculados (nombre_apellido)>
+<!ELEMENT nombre_apellido (nota)>
+<!ELEMENT nota (#PCDATA)>
+]>
+
+<instituto>
+	<FP>
+	<primero_DAM>
+		<asiganturas>
+			<PROG>
+				<alumnos_matriculados>
+					<nombre_apellido> Juan Lopez </nombre_apellido>
+						<nota> 7 </nota>
+					<nombre_apellido> Alberto Lopez </nombre_apellido>
+						<nota> 5 </nota>
+				</alumnos_matriculados>
+			</PROG>
+
+			<LM>
+				<alumnos_matriculados>
+					<nombre_apellido> Carlos Calado </nombre_apellido>
+						<nota> 8 </nota>
+					<nombre_apellido> Juan Lopez </nombre_apellido>
+						<nota> 3 </nota>
+				</alumnos_matriculados>
+			</LM>
+		</asiganturas>
+	</primero_DAM>
+</FP>
+</instituto>

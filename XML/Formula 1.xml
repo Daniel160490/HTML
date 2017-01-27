@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE formula1 [
+<!ELEMENT formula1 (escuderias)>
+<!ELEMENT escuderias (escuderia+)>
+<!ELEMENT escuderia (piloto+)>
+	<!ATTLIST escuderia nombre CDATA #REQUIRED>
+	<!ATTLIST escuderia pts CDATA #REQUIRED>
+<!ELEMENT piloto (puntos)>
+	<!ATTLIST piloto nombre CDATA #REQUIRED>
+	<!ATTLIST piloto num CDATA #REQUIRED>
+<!ELEMENT puntos (#PCDATA)>
+]>
+
+
+
+
+<formula1>
+	<escuderias>
+		<escuderia nombre="Mercedes" pts="630">
+			<piloto nombre="Nico Rosberg" num="6">
+				<puntos> 331 </puntos>
+			</piloto>	 
+			<piloto nombre="Lewis Hamilton" num="44">
+				<puntos> 305 </puntos>
+			</piloto>	
+		</escuderia>
+
+		<escuderia nombre="Red Bull" pts="400">
+			<piloto nombre="Daniel Ricciardo" num="3">
+				<puntos> 331 </puntos>
+			</piloto>	 
+			<piloto nombre="Max Verstappen" num="33">
+				<puntos> 305 </puntos>
+			</piloto>	
+		</escuderia>
+		.
+		.
+		.
+	</escuderias>
+</formula1>

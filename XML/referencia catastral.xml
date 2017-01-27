@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+	<catastro>
+		<referencia_catastral ="1234567AB1234C 1234 DE">
+		<propiedad>
+			<localiazación>
+				<pais> España </pais>
+				<comunidad> Murcia </comunidad>
+				<ciudad> Caravaca de la Cruz </ciudad>
+				<urbanos>
+					<via> Maestro Juan Saravia </via>
+					<número> 2 </número>
+					<codigo_postal> 30400 </codigo_postal>
+					<tipo> casa </tipo>
+				</urbanos>
+			</localiazación>
+		</propiedad>
+		<titulares>
+			<titular>
+				<nombre> Juan </nombre>
+				<apellido> García </apellido>
+				<DNI> 12345678D </DNI>
+				<porcentaje> 100% </porcentaje>
+			</titular>
+		</titulares>
+		</referencia_catastral ="1234567AB1234C 1234 DE">
+	</catastro>

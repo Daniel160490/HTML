@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE nutrition [
+<!ELEMENT nutrition (daily-values,food+)>
+<!ELEMENT daily-values (total-fat,saturated-fat,cholesterol,sodium,carb,fiber,protein)>
+<!ELEMENT total-fat (#PCDATA)>
+	<!ATTLIST total-fat units CDATA #REQUIRED>
+<!ELEMENT saturated-fat (#PCDATA)>
+	<!ATTLIST saturated-fat units CDATA #REQUIRED>
+<!ELEMENT cholesterol (#PCDATA)>
+	<!ATTLIST cholesterol units CDATA #REQUIRED>
+<!ELEMENT sodium (#PCDATA)>
+	<!ATTLIST sodium units CDATA #REQUIRED>
+<!ELEMENT carb (#PCDATA)>
+	<!ATTLIST carb units CDATA #REQUIRED>
+<!ELEMENT fiber (#PCDATA)>
+	<!ATTLIST fiber units CDATA #REQUIRED>
+<!ELEMENT protein (#PCDATA)>
+	<!ATTLIST protein units CDATA #REQUIRED>
+<!ELEMENT food (name,mfr,serving,calories,total-fat,saturated-fat,cholesterol,sodium,carb,fiber,protein,vitamins,minerals)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT mfr (#PCDATA)>
+<!ELEMENT serving (#PCDATA)>
+	<!ATTLIST serving units CDATA #REQUIRED>
+<!ELEMENT calories EMPTY>
+	<!ATTLIST calories total CDATA #REQUIRED>
+	<!ATTLIST calories fat CDATA #REQUIRED>
+<!ELEMENT saturated-fat (#PCDATA)>
+<!ELEMENT cholesterol (#PCDATA)>
+<!ELEMENT sodium (#PCDATA)>
+<!ELEMENT carb (#PCDATA)>
+<!ELEMENT fiber (#PCDATA)>
+<!ELEMENT protein (#PCDATA)>
+<!ELEMENT vitamins (a?,c?)>
+	<!ELEMENT a (#PCDATA)>
+	<!ELEMENT c (#PCDATA)>
+<!ELEMENT minerals (ca?,fe?)>
+	<!ELEMENT ca (#PCDATA)>
+	<!ELEMENT fe (#PCDATA)>
+]>

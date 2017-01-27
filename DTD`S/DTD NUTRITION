@@ -1,0 +1,15 @@
+<!DOCTYPE nutrition [
+	<!ELEMENT nutrition ( daily-value, food)>
+	<!ATTLIST nutrition cdata #required>
+	<!ELEMENT daily-value (total-fat,satured-fat units,cholesterol units)+>
+		<!ELEMENT total-fat (#pcdata)>
+			<!ATTLIST total-fat units cdata #implied>
+		<!ELEMENT satured-fat (#pcdata)>
+			<!ATTLIST satured-fat cdata #implied>
+		<!ATTLIST cholesterol units cdata #implied>
+		<!ATTLIST carb units cdata #implied>
+	<!ELEMENT food (name,mfr, calories-total,vitamina)	
+		<!ATTLIST food cdata #required>
+		<!ATTLIST name cdata #required>
+		<!ATTLIST mfr cdata #implied>
+		

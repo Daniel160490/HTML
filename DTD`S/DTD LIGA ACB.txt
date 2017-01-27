@@ -1,0 +1,29 @@
+--DTD LIGA ACB--
+Guardar informacion de:
+Equipos
+Jugadores
+Arbitros
+Partidos
+Resultados
+--------------XML-----------------------------------------------------------
+<?xml version = "1.0"?>
+<ACB>
+	<equipos>
+		<equipo>
+			<nombre> </nombre>
+			<jugadores>	
+				<jugador> </jugador>
+			</jugadores>
+		</equipo>
+	</equipos>
+	<arbitros>
+		<arbitro> </arbitro>
+	</arbitros>
+--------------DTD-----------------------------------------------------------
+<?xml version = "1.0"?>
+<!DOCTYPE liga acb [
+	<!ELEMENT liga acb (equipo+,partido+)>
+	<!ATTLIST liga acb cdata #required>
+	<!ELEMENT equipos (jugador+,resultado+)>
+		<!ATTLIST jugador id #required>
+		<!ATTLIST resultado CDATA #implied>

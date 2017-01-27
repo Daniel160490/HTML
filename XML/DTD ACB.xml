@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE liga_ACB [
+<!ELEMENT liga_ACB (equipos+,partidos+)>
+<!ELEMENT equipos (equipo+)>
+<!ELEMENT equipo (nombre,jugadores)>
+	<!ATTLIST equipo numero ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT jugadores (jugador+)>
+<!ELEMENT jugador EMPTY>
+	<!ATTLIST jugador DNI IDREF #REQUIRED>
+<!ELEMENT partidos (partido*)>
+<!ELEMENT partido (equipoL,equipoV,arbitro,resultado)>
+	<!ATTLIST partido IDREF #REQUIRED>
+<!ELEMENT equipoL (#PCDATA)>
+	<!ATTLIST equipoL num_equipo IDREF #REQUIRED>

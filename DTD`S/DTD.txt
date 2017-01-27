@@ -1,0 +1,19 @@
+<?xml version = "1.0"?>
+<!DOCTYPE groupset [
+	<!ELEMENT groupset (script, group+)>
+	<!ATTLIST groupset root CDATA #required>
+	<!ELEMENT script empty>
+		<!ATTLIST script ID ID #required>
+	<!ELEMENT group (itemRef+, grouppref)>
+		<!ATTLIST group ID ID #required>
+		<!ATTLIST group role cdata #implied>
+		<!ATTLIST itemRef (intemClass+, tittle+)>
+			<!ATTLIST itemRef residref ideref #implied>
+			<!ATTLIST itemRef contenttype CDATA #implied>
+			<!ATTLIST itemRef size CDATA #implied>
+		<!ELEMENT intemClass empty>
+			<!ATTLIST itemClass qcode CDATA #implied>
+		<!ELEMENT tittle (#pcdata)>
+	<!ELEMENT groupref empty>
+		<!ATTLIST groupref idref #required>
+]

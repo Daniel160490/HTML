@@ -1,0 +1,126 @@
+Fabrica de Coches.
+
+<!---DTD--->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ELEMENT fabrica_coches [
+<!ELEMENT fabrica_coches (piezas_propias, piezas_compradas, cadena_montaje,trabajadores)>
+<!ELEMENT piezas_propias (ref+, nombre+, peso+, stock+)>
+	<!ATTLIST pieza ref (#PCDATA)>
+	<!ATTLIST pieza nombre (#PCDATA)>
+	<!ATTLIST pieza peso (#PCDATA)>
+	<!ATTLIST pieza stock (#PCDATA)>
+<!ELEMENT piezas_compradas (ref+, nombre+, peso+, stock+)>
+	<!ATTLIST pieza ref (#PCDATA)>
+	<!ATTLIST pieza nombre (#PCDATA)>
+	<!ATTLIST pieza peso (#PCDATA)>
+	<!ATTLIST pieza stock (#PCDATA)>
+<!ELEMENT cadena_montaje (chasis, interior)>
+	<!ATTLIST cadena_montaje chasis (#PCDATA)>
+	<!ATTLIST cadena_montaje interior (#PCDATA)>
+<!ELEMENT trabajadores (obrero)>
+<!ELEMENT obrero (nombre, dni, edad, puesto, datos_laborales)>
+	<!ATTLIST obrero nombre (#PCDATA)>
+	<!ATTLIST obrero dni (#PCDATA)>
+	<!ATTLIST obrero edad (#PCDATA)>
+	<!ATTLIST obrero datos_laborales (#PCDATA)>
+	<!ATTLIST obrero puesto (#PCDATA)>
+]>
+
+<!---SCHEMA--->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="fabrica_coches">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="piezas_propias" type="xs:string" use="required">
+				<xs:attribute name="ref" type="xs:string" use="required">
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([A-Z)(0-9)]*"/>
+					</xs:restriction>
+				</xs:attribute>
+				<xs:attribute name="nombre" type="xs:string" use="required">
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([A-Z])*"/>
+					</xs:restriction>
+				</xs:attribute>
+				<xs:attribute name="peso" type="xs:integer" use="required">
+					<xs:restriction base="xs:integer">
+						<xs:pattern value="[0-9]{2}"/>
+					</xs:restriction>
+				</xs:attribute>
+				<xs:attribute name="stock" type="xs:boolean" use="required">
+					<xs:restriction base="xs:boolean">
+						<xs:pattern value="yes|no"/>
+					</xs:restriction>
+				</xs:attribute>
+			</xs:element>
+			<xs:element name="piezas_compradas" type="xs:string" use="required">
+				</xs:attribute>
+				<xs:attribute name="nombre" type="xs:string" use="required">
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([A-Z])*"/>
+					</xs:restriction>
+				</xs:attribute>
+				<xs:attribute name="peso" type="xs:integer" use="required">
+					<xs:restriction base="xs:integer">
+						<xs:pattern value="[0-9]{2}"/>
+					</xs:restriction>
+				</xs:attribute>
+				<xs:attribute name="stock" type="xs:boolean" use="required">
+					<xs:restriction base="xs:boolean">
+						<xs:pattern value="yes|no"/>
+					</xs:restriction>
+				</xs:attribute>
+			</xs:element>
+			<xs:element name="obrero" type="xs:string" minOccurse="1" use="required">
+				<xs:attribute name="nombre" type="xs:string" use="required">
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([A-Z])*"/>
+					</xs:restriction>
+				<xs:attribute name="apellido" type="xs:string" use="required"/>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([A-Z])*"/>
+					</xs:restriction>
+				</xs:attribute>
+				<xs:attribute name="dni" use="required"/>
+					<xs:restriction base="xs:string">
+						<xs:pattern  value="([0-9]{8}[A-Z]{1})"/>
+					</xs:restriction>
+				</xs:attribute>
+				<xs:attribute name="edad" type="xs:integer" use="required">
+					<xs:restriction base="xs:integer">
+						<xs:pattern value="([0-1][0-9]{2}"/>
+				</xs:restriction>
+				</xs:attribute>
+				<xs:attribute name="puesto" type="xs:string" use="required"/>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+</xs:schema>
+
+<!---XML--->
+<fabrica_coches>
+	<piezas_propias>
+		<ref> 123A03 </ref>
+		<nombre> Volante </nombre>
+		<peso> 0.20 </peso>
+		<stock> Si </stock>
+	</piezas_propias>
+	<piezas_compradas>
+		<ref> 123BZ03 </ref>
+		<nombre> Bombilla </nombre>
+		<peso> 0.20 </peso>
+		<stock> Si </stock>
+	</piezas_compradas>
+	<trabajadores>
+		<obrero>
+			<nombre> Pedro Jose </nombre>
+			<dni> 74739684Q </dni>
+			<edad> 45 </edad>
+			<datos_laborales> </datos_laborales>
+			<puesto> Ensamblador </puesto>
+		</obrero>
+	</trabajadores>
+</fabrica_coches>
+

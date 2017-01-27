@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE colegio [
+<!ELEMENT colegio (alumnos,profesores)>
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (nombre,dni,matricula)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT matricula (asignatura+)>
+<!ELEMENT asignatura (nombre,fecha_matricula,nota)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fecha_matricula (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+<!ELEMENT profesores (profesor+)>
+<!ELEMENT profesor (nombre_profesor,asignaturas_impartidas)>
+<!ELEMENT nombre_profesor (#PCDATA)>
+<!ELEMENT asignaturas_impartidas (asignatura_impartida+)>
+<!ELEMENT asignatura_impartida (nombre_asignatura,codigo)>
+<!ELEMENT nombre_asignatura (#PCDATA)>
+<!ELEMENT codigo (#PCDATA)>
+]>
+
+<colegio>
+	<alumnos>
+		<alumno>
+			<nombre> JJ </nombre>
+			<dni> 12345678X </dni>
+			<matricula>
+				<asignatura>
+					<nombre_asignatura> LM </nombre_asignatura>
+					<nota> ND </nota>
+				</asignatura>
+				.
+				.
+				.
+			</matricula>
+		</alumno>
+		.
+		.
+		.
+	</alumnos>
+
+	<profesores>
+		<profesor>
+			<nombre_profesor> JJ </nombre_profesor>
+			<asignaturas_impartidas>
+				<asignatura_impartida> LM </asignatura_impartida>
+				<codigo> LM01 </codigo>
+			</asignaturas_impartidas>
+			.
+			.
+			.
+		</profesor>
+		.
+		.
+		.
+	</profesores>
+</colegio>	

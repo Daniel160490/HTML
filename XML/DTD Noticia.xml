@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE groupSet [
+<!ELEMENT groupSet (script,group+)>
+	<!ATTLIST groupSet root CDATA #REQUIRED>
+<!ELEMENT script EMPTY>
+	<!ATTLIST script id ID #REQUIRED>
+<!ELEMENT group (itemRef*,groupRef*)>
+	<!ATTLIST group id ID #REQUIRED>
+	<!ATTLIST group role CDATA #REQUIRED>
+	<!ATTLIST group mode CDATA #IMPLIED>
+<!ELEMENT itemRef (itemClass,title)>
+	<!ATTLIST itemRef residref IDREF #REQUIRED>
+	<!ATTLIST itemRef contenttype CDATA #REQUIRED>
+	<!ATTLIST itemRef size CDATA #IMPLIED>
+	<!ATTLIST itemRef width CDATA #IMPLIED>
+	<!ATTLIST itemRef height CDATA #IMPLIED>
+<!ELEMENT itemClass EMPTY>
+	<!ATTLIST itemClass qcode CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+	<!ATTLIST groupRef idref IDREF #REQUIRED>
+<!ELEMENT groupRef EMPTY>
+	<!ATTLIST groupRef idref IDREF #REQUIRED>
+]>
