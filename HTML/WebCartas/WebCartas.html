@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<style type="text/css">
+	body{
+		font-family: verdana, arial, sans-serif;
+		background-image: url("fondo.png");
+	}
+	#cabecera{
+		margin-top: 10px;
+		display: block;
+		text-align: center;
+	}
+	#cajaCartas{
+		width: 760px;
+		margin: auto;
+		text-align: center;
+		padding-top: 50px;
+	}
+	ul#menu_cartas {
+		text-align: center;
+		margin-top: 50px;
+	}
+	ul#menu_cartas li{
+		height: 450px;
+		width: 130px;
+		display: block;
+		float: left;
+		border: 1px solid #666;
+		padding: 25px 10px;
+		position: relative;
+		-moz-border-radius: 10px;
+  		-webkit-border-radius: 10px;
+  		-moz-box-shadow: 2px 2px 10px #000;
+  		-webkit-box-shadow: 2px 2px 10px #000;
+  		-moz-transition: all 0.5s ease-in-out;
+  		-webkit-transition: all 0.5s ease-in-out;
+  		margin-bottom: 70px;
+	}
+	ul#menu_cartas li img{
+		margin-top: 7px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-box-shadow: 0px 0px 5px #aaa;
+		-webkit-box-shadow: 0px 0px 5px #aaa;
+	}
+	ul {list-style: none;}
+	#carta-1{
+		-webkit-transform: rotate(-20deg);
+		-moz-transform: rotate(-20deg);
+		z-index: 1;
+		left: 150px;
+		top: 40px;
+	}
+	#carta-2{
+		-webkit-transform: rotate(-10deg);
+		-moz-transform: rotate(-10deg);
+		z-index: 2;
+		left: 70px;
+		top: 10px;
+	}
+	#carta-3{
+		z-index: 3;
+	}
+	#carta-4{
+		-webkit-transform: rotate(10deg);
+		-moz-transform: rotate(10deg);
+		z-index: 2;
+		right: 70px;
+		top: 10px;
+	}
+	#carta-5{
+		-webkit-transform: rotate(20deg);
+		-moz-transform: rotate(20deg);
+		z-index: 1;
+		right: 150px;
+		top: 40px;
+	}
+	
+	#carta-1:hover{
+		-moz-transform: scale(1.1) rotate(-18deg);
+		-webkit-transform: scale(1.1) rotate(-18deg);
+		z-index: 10;
+	}
+	#carta-2:hover{
+		-moz-transform: scale(1.1) rotate(-8deg);
+		-webkit-transform: scale(1.1) rotate(-8deg);
+		z-index: 10;
+	}
+	#carta-3:hover{
+		-moz-transform: scale(1.1) rotate(2deg);
+		-webkit-transform: scale(1.1) rotate(2deg);
+		z-index: 10;
+	}
+	#carta-4:hover{
+		-moz-transform: scale(1.1) rotate(12deg);
+		-webkit-transform: scale(1.1) rotate(12deg);
+		z-index: 10;
+	}
+	#carta-5:hover{
+		-moz-transform: scale(1.1) rotate(22deg);
+		-webkit-transform: scale(1.1) rotate(22deg);
+		z-index: 10;
+	}
+</style>
+<body>
+	<div id="cabecera">
+		<img src="demo.png">
+	</div>
+	<div id="cajaCartas">
+		<ul id="menu_cartas">
+			<li id="carta-1">
+				<h3>CARTA 1</h3>
+				<img src="carta-fondo1.jpeg">
+			</li>
+			<li id="carta-2">
+				<h3>CARTA 2</h3>
+				<img src="carta-fondo2.jpeg">
+			</li>
+			<li id="carta-3">
+				<h3>CARTA 3</h3>
+				<img src="carta-fondo3.png">
+			</li>
+			<li id="carta-4">
+				<h3>CARTA 4</h3>
+				<img src="carta-fondo4.jpeg">
+			</li>
+			<li id="carta-5">
+				<h3>CARTA 5</h3>
+				<img src="carta-fondo5.png">
+			</li>
+		</ul>
+</body>
+</html>

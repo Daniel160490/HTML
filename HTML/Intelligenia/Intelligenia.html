@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="font-awesome.min.css">
+</head>
+<style type="text/css">
+	body {
+		font-family: `Titullium Web`, sans-serif;
+		margin: 0;
+		font-weight: 200;
+	}
+	ul{ list-style: none; }
+	#menuprincipal {
+		display: block;
+		text-align: center;
+		width: 100%;
+		height: 75px;
+		background-color: #fff;
+		position: fixed;
+		z-index: 100000;
+		box-shadow: 0 -30px 97px 31px;
+		margin-top: 0px;
+	}
+	#menuprincipal ul{
+		width: 718px;
+		margin: 0 auto;
+		margin-top: 0px;
+		margin-right: auto;
+		margin-bottom: 0px;
+		margin-left: auto;
+		height: 76px;
+		list-style: none;
+		font-size: 0;
+		padding: 0;
+	}
+	#menuprincipal .logo {
+		background: url("NAV_SUP_LOGO.png");
+		width: 200px;
+		height: 75px;
+		margin: auto;
+	}
+	#menuprincipal ul li {
+		float: center;
+		display: inline-block;
+		height: 76px;
+		min-width: 129px;
+		text-align: center;
+		line-height: 75px;
+		border: 0;
+		border-top-width: 0px;
+			border-right-width: 0px;
+			border-bottom-width: 0px;
+			border-left-width: 0px;
+			border-top-style: none;
+			border-right-style: none;
+			border-bottom-style: none;
+			border-left-style: none;
+			border-top-color: currentcolor;
+			border-right-color: currentcolor;
+			border-bottom-color: currentcolor;
+			border-left-color: currentcolor;
+			-moz-border-top-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			border-image-source: none;
+			border-image-slice: 100% 100% 100% 100%;
+			border-image-width: 1 1 1 1;
+			border-image-outset: 0 0 0 0;
+			border-image-repeat: stretch stretch;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	#menuprincipal div.contact_by_phone .phones {
+		display: inline-block;;
+		margin-left: 7px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#menuprincipal div.contact_by_phone {
+		font-family: Titillium Web;
+		color: #00a4c8;
+		font-size: 20px;
+		font-weight: 300;
+		float: right;
+	}
+	#menuprincipal div.contact_by_phone .phone-icon .fa.fa-phone{
+		font-size: 20px;
+		border: 1.5px solid #00a4c8;
+		vertical-align: middle;
+		margin-top: -25px;
+		padding: 8px 10px;
+		float: right;
+	}
+	.fa{
+		display: inline-block;
+		font: normal normal normal 14px/1 FontAwesome;
+		text-rendering: auto;
+	}
+	h1{
+		font-size: 1.71em;
+		margin: .76em 0;
+	}
+	div#home{padding-top: 75px;}
+	#home{overflow-x: hidden;}
+	div#home header{
+		min-height: 93vh;
+		height: 93%;
+		background-color: #fff;
+	}
+	header{display: block;}
+	.animation-index{
+		min-height: 425px;
+		padding: 0;
+		margin: 0;
+		font-size: 0;
+		max-height: 100%;
+		overflow: hidden;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		width: 100%;
+		height: 100vh;
+		position: relative;
+	}
+	.animation-index li{
+		display: block;
+		transition: 2s;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center center;
+	}
+	li.menuprincipal:hover{
+		background-color: #00a4c8;
+	}
+	.hide{
+		display: none;
+	}
+	div#home header {
+		min-height: 93vh;
+		height: 93%;
+		background-color: #fff;
+	}
+	
+</style>
+<body>
+	<div id="menuprincipal">
+		<ul class="menuprincipal">
+			<li class="menuprincipal"> Nosotros</li>
+			<li class="menuprincipal"> Trabajos</li>
+			<li class="logo"></li>
+			<li class="menuprincipal"> Actualidad</li>
+			<li class="menuprincipal"> Hablamos?</li>
+		</ul>
+		<div class="contact_by_phone">
+			<div class="phones">911 863 563</div>
+			<div class="phones">958 007 070</div>
+			<div class="phone icon">
+				<span class="fa fa-phone"></span>
+		</div>
+		</div>
+		
+	</div>
+	
+	<div id="home">
+		<div class="index"></div>
+		<h1 class="hide">Conoce Intelligenia</h1>
+		<header >
+			<ul class="animation-index">
+				<li style="background-image: url(negocio.jpeg); height: 300px;"></li>
+				<li style="background-image: url(ingenieria.jpeg);"></li>
+			</ul>
+		</header>
+	</div>
+</body>
+</html>

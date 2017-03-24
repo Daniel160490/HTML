@@ -1,0 +1,89 @@
+Base de Datos Criminalística Española
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!---DTD--->
+<!DOCTYPE ELEMENT BaseDatos [
+<!ELEMENT BaseDatos (criminales)>
+<!ELEMENT criminales (criminal+)>
+<!ELEMENT criminal (nombre, apellido, dni, fecha_nacimiento, genero, altura, descripcion_fisica, direccion, historial_medico?, delitos_cometidos+, pena_recibida+, cumpliendo)>
+
+	<!ATTLIST criminal nombre (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal apellido (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal dni (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal fecha_nacimiento (#CDATA) #REQUIERED>
+	<!ATTLIST criminal genero (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal altura (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal descripcion_fisica (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal direccion (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal historial_medico (#PCDATA) #IMPLIED>
+	<!ATTLIST criminal delitos_cometidos (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal pena_recibida (#PCDATA) #REQUIERED>
+	<!ATTLIST criminal cumpliemento (#PCDATA) #EMPTY>
+]>
+
+<!---SCHEMA--->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="criminalistica_española">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string" use="required"/>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([A-Z])*"/>
+					</xs:restriction>
+				</xs:element>
+				<xs:element name="apellido" type="xs:string" use="required"/>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([A-Z])*"/>
+					</xs:restriction>
+				</xs:element>
+				<xs:element name="dni" use="required"/>
+					<xs:restriction base="xs:string">
+						<xs:pattern  value="([0-9]{8}[A-Z]{1})"/>
+					</xs:restriction>
+				</xs:element>
+				<xs:element name="fecha_nacimiento" use="required"/>
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:pattern value="[0-9]{2}[0-9]{2}[0-9]{4}">
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="genero" type="xs:string" use="required"/>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="male|female"/>
+					</xs:restriction>
+				</xs:element>
+				<xs:element name="altura" type="xs:integer" use="required"/>
+				<xs:element name="descripcion_fisica" type="xs:string" use="required"/>
+				<xs:element name="direccion" type="xs:string" value="([a-z])*" use="required"/>
+				<xs:element name="historial_medico" type="xs:string" use="required"/>
+				<xs:element name="delitos_cometidos" type="xs:string" use="required"/>
+				<xs:element name="pena_recibida" type="xs:string" use="required"/>
+				<xs:element name="cumplimiento" type="xs:string" use="required"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+
+<!---XML--->
+<criminalistica_española>
+	<BaseDatos>
+		<criminales>
+			<criminal>
+				<nombre> Pepe </nombre>
+				<apellido> Gonzalez </apellido>
+				<dni> 74739582C </dni>
+				<fecha_nacimiento> 22041987 </fecha_nacimiento>
+				<genero> hombre </genero>
+				<altura> 1.78 </altura>
+				<descripcion_fisica> </descripcion_fisica>
+				<direccion> calle Pedro Alcantara Madrid </direccion>
+				<historial_medico> </historial_medico>
+				<delitos_cometidos> hurto </delitos_cometidos>
+				<pena_recibida> 2 años de prision </pena_recibida>
+				<cumplimiento> cumpliendo actualmente </cumplimiento>
+			</criminal>
+		</criminales>
+	</BaseDatos>
+</criminalistica_española>
